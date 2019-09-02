@@ -1,0 +1,69 @@
+// dimensions
+.w-100 {
+	width: 100%;
+}
+
+.h-100 {
+	height: 100%;
+}
+
+// spacing
+.py-1 {
+	padding: 1rem 0 1rem 0;
+}
+
+// flex
+.center-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+// type
+.text-md {
+	font-size: 1.5rem;
+}
+.text-bold {
+	font-style: bold;
+}
+
+// box-shadow
+.shadow {
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+// select option caret fix
+
+input[type="number"],
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+}
+// Get rid of #
+// [Deprecation] Using unescaped '#' characters in a data URI body is deprecated
+// and will be removed in M71, around December 2018. Please use '%23' instead.
+// See https://www.chromestatus.com/features/5656049583390720 for more details.
+select {
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="%23d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>')
+		center right no-repeat;
+}
+select:focus {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="%239b4dca" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+}
+
+// grid
+.row .column.column-40, .row .column.column-20 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@media (min-width: 40.0rem) {
+	.row .column.column-40 {
+	    flex: 0 0 40%;
+	    max-width: 40%;
+	}
+	.row .column.column-20 {
+	    flex: 0 0 20%;
+	    max-width: 20%;
+	}
+}

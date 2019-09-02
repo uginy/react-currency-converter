@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Currency Converter</title>
+		<meta name="description" content="A simple currency converter progressive web app built with React and Redux.">
+		<meta name="author" content="tone4hook">
+		<!-- Remove the link tag below - Just there for Github Pages -->
+		<link href="dist/style.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet"></head>
+	<body>
+		<div id="root"></div>
+		<script>
+			// Check that service workers are registered
+			if ("serviceWorker" in navigator) {
+				// Use the window load event to keep the page load performant
+				window.addEventListener("load", () => {
+					navigator.serviceWorker.register("dist/sw.js");
+				});
+			}
+		</script>
+		<!-- Remove the script tag below - Just there for Github Pages -->
+		<script type="text/javascript" src="dist/app.js"></script>
+		<noscript>
+			<div class="container">
+				<h3>This App Requires JavaScript</h3>
+				<p>Please enable JavaScript in browser settings.</p>
+			</div>
+		</noscript>
+	<script type="text/javascript" src="app.js"></script><script type="text/javascript" src="sw.js"></script></body>
+</html>
